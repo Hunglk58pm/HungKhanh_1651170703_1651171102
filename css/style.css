@@ -1,0 +1,167 @@
+    .fa-1x {
+    font-size: 1.5rem;
+    }
+    .navbar-toggler.toggler-example {
+    cursor: pointer;
+    }
+
+    .contact {
+        width:33.33%;
+        color:#fdb913;
+        font-weight: 600;
+        display:flex;
+        align-items: center;
+    }
+    .contact a{
+        color:#fdb913;
+    }
+    .nav-link{
+        color: white;
+    }
+
+    .navbar{
+        background-color: #00008b;
+        font-size: 14px;
+    }
+
+    .lang{
+        display:flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .nav-item > a:hover{
+        text-decoration: underline;
+        color: white;
+    }
+   
+    #main-header{
+        height: 100px;
+        background-color:#fff;
+        border-bottom:1px solid rgba(0,0,0,0.15);
+        display:flex;
+    }
+    
+    .logo{
+        width:30%;
+        display:flex;
+        align-items: center;
+        margin-left:15px;
+    }
+    
+    .main-menu{
+        width:70%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    .main-menu a{
+        text-decoration: none;
+        color:#000;
+        font-size:18px;
+        margin-right:20px;
+    }
+    
+    .main-menu a:hover{
+        color:green;
+    }
+    
+    #myCarousel .carousel-caption{
+            background-color: rgba(0,0,0,0.45);
+            border-bottom: 30px solid transparent;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-height: 130px;
+            overflow: hidden;
+            padding: 30px 130px 0 30px;
+    }
+
+    #doanmot{
+        padding: 20px;
+        display: flex;
+        
+    }
+
+    #doanmot .tieude, #doanhai .tieude{
+        color: black;
+        font-size: 20px;
+    }
+
+    #doanmot .noidung {
+        display: flex;
+       
+    }
+    #doanmot h2{
+      padding: 15px;
+    }
+    #doanmot .col-md-4 img, #doanhai .col-md-4 img{
+        display: inline-block;
+        max-width:100%;
+        max-height: 100%;
+        vertical-align: middle;
+    }
+
+    #doanmot .card-title, #doanhai .card-title{
+        color: #000;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        text-decoration: none;
+    }
+
+    #doanmot a, #doanhai a{
+        color: gray;
+
+    }
+
+    #doanmot a:hover{
+        text-decoration: underline;
+    }
+
+    .btn-option{
+        display: flex;
+    }
+
+    .btn-right{
+      padding-left:820px;
+    }
+
+    .card{
+      text-align: center;
+      background-color: #00008b;
+      color: #fff;
+      border: none;
+    }
+
+    #doanhai{
+      display: flex;
+    }
+
+    #doanhai h3, #doanmot h2{
+      margin-top: 20px;  
+      margin-bottom: 20px;  
+    }
+
+     .row{
+        background-color: #00008b;
+    }
+    
+    .search{
+      float: right;
+      display: flex;
+    }
+
+
+
+
+
+
+
+
+
+
