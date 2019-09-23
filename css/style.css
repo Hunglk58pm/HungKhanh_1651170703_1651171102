@@ -66,7 +66,17 @@
     .main-menu a:hover{
         color:green;
     }
-    
+
+
+    .search{
+        float: right;
+        display: flex;
+      }
+
+      /* heet style top header */
+
+
+    /* tieu de slide */
     #myCarousel .carousel-caption{
             background-color: rgba(0,0,0,0.45);
             border-bottom: 30px solid transparent;
@@ -78,10 +88,11 @@
             padding: 30px 130px 0 30px;
     }
 
-    #doanmot{
-        padding: 20px;
+
+    /* style doan mot */
+    #doanmot, #doanhai{
         display: flex;
-        
+    
     }
 
     #doanmot .tieude, #doanhai .tieude{
@@ -93,10 +104,7 @@
         display: flex;
        
     }
-    #doanmot h2{
-      padding: 15px;
-    }
-    #doanmot .col-md-4 img, #doanhai .col-md-4 img{
+ #doanhai .col-md-9 img{
         display: inline-block;
         max-width:100%;
         max-height: 100%;
@@ -112,49 +120,32 @@
         margin-bottom: 10px;
         margin-top: 20px;
         text-decoration: none;
-    }
+    } 
 
     #doanmot a, #doanhai a{
         color: gray;
 
     }
 
+    #doanhai a:hover{
+        text-decoration: underline;
+    }
+
     #doanmot a:hover{
         text-decoration: underline;
     }
 
-    .btn-option{
-        display: flex;
-    }
 
-    .btn-right{
-      padding-left:820px;
-    }
-
-    .card{
-      text-align: center;
-      background-color: #00008b;
-      color: #fff;
-      border: none;
-    }
-
-    #doanhai{
-      display: flex;
-    }
-
-    #doanhai h3, #doanmot h2{
-      margin-top: 20px;  
-      margin-bottom: 20px;  
-    }
-
-     .row{
+    #container{
         background-color: #00008b;
+        
     }
+    #container a{
+        color: white;
+    }
+
+     
     
-    .search{
-      float: right;
-      display: flex;
-    }
 
 
 
