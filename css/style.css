@@ -144,7 +144,26 @@
         color: white;
     }
 
-     
+    h2:after {
+        display: flex;
+        margin: 0 20px 8px 0;
+        height: 3px;
+        content: " ";
+        text-shadow: none;
+        background-color: goldenrod;
+        width: 100px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    
+    .d-flex span {
+        background-color: #00008b;
+        color: #fff;
+        font-size: 30px;
+    }
+    .title a{
+        font-size: 20px;
+    }
     
 
 
