@@ -87,7 +87,9 @@
             overflow: hidden;
             padding: 30px 130px 0 30px;
     }
-
+    #myCarousel img{
+        width: 1345px;
+    }
 
     /* style doan mot */
     #doanmot, #doanhai{
@@ -163,6 +165,10 @@
     }
     .title a{
         font-size: 20px;
+    }
+
+    .dangnhap{
+        margin: 0 auto;
     }
     
 

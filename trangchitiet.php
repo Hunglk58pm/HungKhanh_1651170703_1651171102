@@ -2,12 +2,14 @@
 require"connect.php"
 ?>
     <?php
-    // if($_GET['idanhmuc'])
-    // {
-    //     $idanhmuc= $_GET['idanhmuc'];
-    //     echo $idanhmuc;
-    // }
+      if($_GET['cid'])
+     {
+         $cid= $_GET['cid'];
+        // echo $cid;
+        }
+	
 ?>
+
         <!DOCTYPE html>
         <html lang="en">
 
@@ -65,11 +67,17 @@ require"connect.php"
                             <a href="index.php"><img src="img/logo_ntt.png" alt=""></a>
                         </div>
                         <div class="main-menu">
-                            <a href="trangchitiet.php"><i class="material-icons icon">info </i>   Giới thiệu</a>
-                            <a href="#">Tuyển sinh</a>
-                            <a href="#">Đào tạo</a>
-                            <a href="#">Nghiên cứu</a>
-                            <a href="#">Hợp tác doanh nghiệp</a>
+                        <?php 
+                        $sql= "SELECT * FROM `danhmuc`";
+
+                        $data=mysqli_query($con,$sql);
+
+                        while($row=mysqli_fetch_array($data, MYSQLI_ASSOC))
+                        {
+                            echo"<a href='trangchitiet.php?cid=".$row['iddanhmuc']."'>".$row['tendanhmuc']."</a>";
+                        }
+                    
+                    ?>
                         </div>
                     </div>
                 </div>
@@ -153,131 +161,31 @@ require"connect.php"
                             <!-- /heading -->
                         </div>
 
-                        <h3 class="heading-3"></h3>
-                        <article class="media sub-cate">
-                            <figure class="thumb mb-0 mr-3"><img class="d-flex img-fluid" src="img/ct22.png" alt="Generic placeholder image"></figure>
-                            <div class="media-body">
-                                <h5 class="title mt-0">
-                                                                    <a href="#">Giới thiệu chung</a>
-                                                            </h5> Ra đời từ chủ trương xã hội hóa giáo dục, Trường Đại học Nguyễn Tất Thành đã không ngừng đầu tư, xây dựng và phát triển để trở thành một trường đại học đẳng cấp quốc gia và hội nhập quốc tế. Sau 20 năm, đến này trường đã có những bước tiến vượt trội trong công tác đào tạo với 15 khoa, 44 chương trình đào tạo bậc đại học thuộc 05 khối ngành: Sức khỏe, Kinh tế, Xã hội – Nhân văn, Kỹ thuật – Công nghệ, Nghệ thuật – Mỹ thuật.
-                                <ul class="list-unstyled list-sub mb-0 row">
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="#">Thư ngỏ Hiệu trưởng</a></li>
+                        <?php 
+                       $sql= "SELECT * FROM `grap_danhmuc` WHERE cid ='$cid';  ";
+                        $data=mysqli_query($con,$sql);
+                       
 
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="#">Tầm nhìn - Sứ mạng</a></li>
-
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="#">Văn hóa ĐH Nguyễn Tất Thành</a></li>
-
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="#">Các thành tích đạt được</a></li>
-
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="#">Bài ca Đại học Nguyễn Tất Thành</a></li>
-
-                                </ul>
-                            </div>
-                        </article>
-                        <article class="media sub-cate">
-                            <figure class="thumb mb-0 mr-3"><img class="d-flex img-fluid" src="img/ct23.png" alt="Generic placeholder image"></figure>
-                            <div class="media-body">
-                                <h5 class="title mt-0">
-                                                                    <a href="/web/danh-muc/toan-canh-dh-nguyen-tat-thanh">Toàn cảnh ĐH Nguyễn Tất Thành</a>
-                                                            </h5> Trải qua quá trình 20 năm hình thành và phát triển, đến nay, Trường Đại học Nguyễn Tất Thành đã khẳng định được uy tín và danh hiệu của mình trên bản đồ giáo dục Việt Nam.
-                                <ul class="list-unstyled list-sub mb-0 row">
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="#">Những cột mốc phát triển</a></li>
-
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="#">Những con số ấn tượng</a></li>
-
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="#">Một số thành tích của sinh viên</a></li>
-
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="#">Các đề tài nghiên cứu khoa học</a></li>
-
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="#">Hợp tác quốc tế</a></li>
-
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="#">Hợp tác doanh nghiệp</a></li>
-
-                                </ul>
-                            </div>
-                        </article>
-                        <article class="media sub-cate">
-                            <figure class="thumb mb-0 mr-3"><img class="d-flex img-fluid" src="img/ct24.png" alt="Generic placeholder image"></figure>
-                            <div class="media-body">
-                                <h5 class="title mt-0">
-                                                                    <a href="/web/danh-muc/he-thong-co-so-vat-chat">Hệ thống Cơ sở vật chất</a>
-                                                            </h5> Theo thang điểm đánh giá của Tổ chức QS - Stars Anh quốc thì tiêu chuẩn cơ sở vật chất của Trường ĐH Nguyễn Tất Thành được tổ chức này đánh giá với số điểm tuyệt đối: 5 sao - mức độ cao nhất trong đánh giá gắn sao của QS - Stars.
-                                <ul class="list-unstyled list-sub mb-0 row">
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="/web/danh-muc/he-thong-co-so-vat-chat/co-so-an-phu-dong-quan-12">Cơ sở An Phú Đông - Quận 12</a></li>
-
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="/web/danh-muc/he-thong-co-so-vat-chat/co-so-300a-quan-4">Cơ sở 300A - Quận 4</a></li>
-
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="/web/danh-muc/he-thong-co-so-vat-chat/co-so-nguyen-huu-tho-quan-7">Cơ sở Nguyễn Hữu Thọ - Quận 7</a></li>
-
-                                </ul>
-                            </div>
-                        </article>
-                        <article class="media sub-cate">
-                            <figure class="thumb mb-0 mr-3"><img class="d-flex img-fluid" src="img/ct25.png" alt="Generic placeholder image"></figure>
-                            <div class="media-body">
-                                <h5 class="title mt-0">
-                                                                    <a href="/web/danh-muc/thong-tin-3-cong-khai">Thông tin 3 công khai</a>
-                                                            </h5> Theo quy định của Bộ GD&amp;ĐT tại Thông tư 09/2009/TT-BGDĐT ngày 07/05/2009 các cơ sở giáo dục đại học phải có trách nhiệm công khai minh bạch các tiêu chuẩn để học sinh và phụ huynh có thể lựa chọn môi trường học tập phù hợp cho mình; đồng thời cũng tạo điều kiện cho xã hội có theo dõi, giám sát quá trình dạy và học của các cơ sở.
-                                <ul class="list-unstyled list-sub mb-0 row">
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="/web/danh-muc/thong-tin-3-cong-khai/3-cong-khai-nh-2018-2019">3 công khai NH 2018 - 2019</a></li>
-
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="/web/danh-muc/thong-tin-3-cong-khai/3-cong-khai-nh-2017-2018">3 công khai NH 2017 - 2018</a></li>
-
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="/web/danh-muc/thong-tin-3-cong-khai/3-cong-khai-nh-2016-2017">3 công khai NH 2016-2017</a></li>
-
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="/web/danh-muc/thong-tin-3-cong-khai/3-cong-khai-nh-2015-2016">3 công khai NH 2015-2016</a></li>
-
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="/web/danh-muc/thong-tin-3-cong-khai/3-cong-khai-nh-2014-2015">3 công khai NH 2014-2015</a></li>
-
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="/web/danh-muc/thong-tin-3-cong-khai/3-cong-khai-nh-2013-2014">3 công khai NH 2013-2014</a></li>
-
-                                    <li class="col-md-6"><i class="fa fa-angle-right c-lime-a5 mr-1" aria-hidden="true"></i>
-                                        <a href="/web/danh-muc/thong-tin-3-cong-khai/3-cong-khai-nh-2012-2013">3 công khai NH 2012-2013</a></li>
-
-                                </ul>
-                            </div>
-                        </article>
-                        <article class="media sub-cate">
-                            <figure class="thumb mb-0 mr-3"><img class="d-flex img-fluid" src="img/ct26.png" alt="Generic placeholder image"></figure>
-                            <div class="media-body">
-                                <h5 class="title mt-0">
-                                                                    <a href="http://dbcl.ntt.edu.vn">Đảm bảo chất lượng</a>
-                                                            </h5> Đáp ứng yêu cầu về tuyển sinh, kiểm định chất lượng giáo dục đại học và trách nhiệm giải trình với xã hội trong bối cảnh hội nhập, Trường Đại học Nguyễn Tất Thành đã thực hiện tự đánh giá cấp Chương trình đào tạo và cấp Cơ sở đào tạo (tức cấp Trường) theo Bộ tiêu chuẩn chất lượng của Bộ giáo dục và Đào tạo. Các hoạt động đảm bảo chất lượng trong Nhà trường đều hướng đến việc thực hiện thành công sứ mạng, tầm nhìn, mục tiêu giáo dục, và các giá trị cốt lõi của Trường.
-                                <ul class="list-unstyled list-sub mb-0 row">
-                                </ul>
-                            </div>
-                        </article>
-                        <article class="media sub-cate">
-                            <figure class="thumb mb-0 mr-3"><img class="d-flex img-fluid" src="img/ct27.png" alt="Generic placeholder image"></figure>
-                            <div class="media-body">
-                                <h5 class="title mt-0">
-                                                                    <a href="/web/danh-muc/phat-trien-ben-vung">Phát triển bền vững</a>
-                                                            </h5> Năm 1987, trong Báo cáo “Tương lai chung của chúng ta”, Ủy ban Thế giới về Môi trường và Phát triển (WCED-World Commission on Environment and Development) của Liên hợp quốc, thì &quot;phát triển bền vững&quot; được định nghĩa là “Sự phát triển đáp ứng được nhu cầu của hiện tại mà không làm tổn thương khả năng cho việc đáp ứng nhu cầu của các thế hệ tương lai”. Trường Đại học Nguyễn Tất Thành hiểu, nắm rõ và thực hiện theo tinh thần này thông qua nhiều hoạt động, chương trình thực tế để biến thông điệp thành thói quen nhằm giúp sinh viên thực sự sống và học tập có trách nhiệm với môi trường và xã hội xung quanh mình. Gieo mầm xanh, gặt sự sống
-                                <ul class="list-unstyled list-sub mb-0 row">
-                                </ul>
-                            </div>
-                        </article>
-
+                        while($row=mysqli_fetch_array($data, MYSQLI_ASSOC))
+                        {
+                        echo"<article class='media sub-cate'>";
+                        echo"<img class='d-flex img-fluid' src=".$row['img']." alt=''>";
+                        echo"<div class='media-body'>";
+                        echo"<h5 class='title mt-0'>";
+                        echo"<a href='#'>".$row['tieude']."</a>";
+                        echo"<h5>".$row['noidung']."</h5>";
+                        echo"</div>";
+                        echo"</article>";
+                        }
+                        ?>
+                        <!-- <article class="media sub-cate">
+                         <figure class="thumb mb-0 mr-3"><img class="d-flex img-fluid" src="img/ct23.png" alt="Generic placeholder image"></figure>
+                         <div class="media-body">
+                             <h5 class="title mt-0">
+                             <a href="">Toàn cảnh ĐH Nguyễn Tất Thành</a>
+                             </h5> Trải qua quá trình 20 năm hình thành và phát triển, đến nay, Trường Đại học Nguyễn Tất Thành đã khẳng định được uy tín và danh hiệu của mình trên bản đồ giáo dục Việt Nam.
+                         </div>
+                        </article> -->
                     </div>
                 </div>
 

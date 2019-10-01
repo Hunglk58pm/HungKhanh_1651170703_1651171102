@@ -48,7 +48,11 @@ require"connect.php"
                             <div class="lang">
                                 <img class="lang " src="img/flags/en.jpg" alt="english flag">
                             </div>
+
+                            <a  href="dangnhap.php" type="button"  class="btn btn-default" style="margin-left: 20px;">Đăng nhập</a>
+                            <a  href="dangky.php" type="button" class="btn btn-default" >Đăng ký</a>
                         </div>
+                        
 
                     </div>
                 </nav>
@@ -57,11 +61,22 @@ require"connect.php"
                         <a href="index.php"><img src="img/logo_ntt.png" alt="" ></a>
                     </div>
                     <div class="main-menu">
-                        <a href="trangchitiet.php"><i class="material-icons icon">info </i>   Giới thiệu</a>
+                     <?php 
+                        $sql= "SELECT * FROM `danhmuc`";
+
+                        $data=mysqli_query($con,$sql);
+
+                        while($row=mysqli_fetch_array($data, MYSQLI_ASSOC))
+                        {
+                            echo"<a href='trangchitiet.php?cid=".$row['iddanhmuc']."'>".$row['tendanhmuc']."</a>";
+                        }
+                    
+                    ?>
+                        <!-- <a href="#">Giới thiệu</a>
                         <a href="#">Tuyển sinh</a>
                         <a href="#">Đào tạo</a>
                         <a href="#">Nghiên cứu</a>
-                        <a href="#">Hợp tác doanh nghiệp</a>
+                        <a href="#">Hợp tác doanh nghiệp</a> -->
                     </div>
                 </div>
                 
