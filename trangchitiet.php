@@ -162,7 +162,7 @@ require"connect.php"
                         </div>
 
                         <?php 
-                       $sql= "SELECT * FROM `grap_danhmuc` WHERE cid ='$cid';  ";
+                        $sql= "SELECT * FROM `grap_danhmuc` WHERE cid ='$cid';  ";
                         $data=mysqli_query($con,$sql);
                        
 
@@ -172,8 +172,8 @@ require"connect.php"
                         echo"<img class='d-flex img-fluid' src=".$row['img']." alt=''>";
                         echo"<div class='media-body'>";
                         echo"<h5 class='title mt-0'>";
-                        echo"<a href='#'>".$row['tieude']."</a>";
-                        echo"<h5>".$row['noidung']."</h5>";
+                        echo"<a href='#' style='padding-left: 15px;'>".$row['tieude']."</a>";
+                        echo"<h5 style='padding-left: 15px;'>".$row['noidung']."</h5>";
                         echo"</div>";
                         echo"</article>";
                         }
